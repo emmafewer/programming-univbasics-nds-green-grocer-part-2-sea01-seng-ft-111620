@@ -32,7 +32,7 @@ def apply_clearance(cart)
   counter = 0 
   while counter < cart.length do 
     if cart[counter][:clearance] == true 
-     cart[counter][:count] *= 0.8
+     cart[counter][:price] *= 0.8
      binding.pry
     end
     counter += 1 
