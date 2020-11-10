@@ -50,7 +50,6 @@ def checkout(cart, coupons)
     counter += 1 
   end
   total
-  binding.pry
   
   # This method should call
   # * consolidate_cart
