@@ -40,7 +40,17 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  new_cart = consolidate_cart()
+  consolidated_cart = consolidate_cart(cart)
+  cart_with_coupons = apply_coupons(consolidated_cart, coupons)
+  cart_with_coupons_clearance = apply_clearance(cart_with_coupons)
+  
+  counter = 0 
+  while counter < cart_with_coupons_clearance.length do 
+    total = cart[counter][:price] * cart[counter][:count]
+  end
+  total
+  binding.pry
+  
   # This method should call
   # * consolidate_cart
   # * apply_coupons
