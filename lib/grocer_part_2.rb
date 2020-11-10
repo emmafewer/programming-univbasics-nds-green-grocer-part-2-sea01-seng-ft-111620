@@ -47,6 +47,7 @@ def checkout(cart, coupons)
   counter = 0 
   while counter < cart_with_coupons_clearance.length do 
     total = cart[counter][:price] * cart[counter][:count]
+    counter += 1 
   end
   total
   binding.pry
